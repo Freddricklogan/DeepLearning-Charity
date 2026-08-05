@@ -1,5 +1,8 @@
 # Deep Learning Charity Success Predictor
 
+**[Live demo / docs](https://freddricklogan.github.io/deeplearning-charity/)** &nbsp;|&nbsp; [Portfolio](https://fredlogan.phd) &nbsp;|&nbsp; [All Projects](https://freddricklogan.github.io/projects/)
+
+
 ![Neural Network Model](images/model_performance.jpg)
 
 ## Overview
