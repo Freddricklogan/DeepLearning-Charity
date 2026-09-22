@@ -1,0 +1,9 @@
+# Streamlit companion app: the "signal" category palette (dark), matching the static report's shell.
+# Values are the dark signal tokens from the Executive Shell (src/charity_model/shell/exec-shell.css).
+[theme]
+base = "dark"
+primaryColor = "#818cf8"
+backgroundColor = "#0f172a"
+secondaryBackgroundColor = "#16213b"
+textColor = "#e5e9f2"
+font = "sans serif"
