@@ -8,9 +8,17 @@ watch precision, recall and the confusion counts change on the held-out rows.
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
+os.environ.setdefault("KERAS_BACKEND", "jax")
+
+# Community Cloud runs this file from a plain checkout; make the src/ package importable there.
+import sys
+
 import streamlit as st
+
+sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
 
 from charity_model.baseline import fit_predict
 from charity_model.data import load, preprocess, split_scale
