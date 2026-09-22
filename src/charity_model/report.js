@@ -5,6 +5,7 @@ const data = JSON.parse(document.getElementById('report-data').textContent);
 const pct = (v, d = 2) => `${(v * 100).toFixed(d)}%`;
 
 const shell = mountExecShell({
+  theme: 'signal',
   title: 'Charity Funding Outcome Classifier',
   tagline: `A tabular classifier on the Alphabet Soup dataset with the parts a reviewer looks for: tested preprocessing, a logistic-regression baseline beside the network, metrics measured on held-out rows in the CI run that published this page, and a generated model card that says what the model is not for.`,
   repo: 'https://github.com/Freddricklogan/DeepLearning-Charity',
