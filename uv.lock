@@ -3,16 +3,16 @@ revision = 3
 requires-python = ">=3.12"
 resolution-markers = [
     "python_full_version >= '3.15' and sys_platform == 'win32'",
-    "python_full_version == '3.14.*' and sys_platform == 'win32'",
     "python_full_version >= '3.15' and sys_platform == 'emscripten'",
-    "python_full_version == '3.14.*' and sys_platform == 'emscripten'",
     "python_full_version >= '3.15' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version == '3.14.*' and sys_platform == 'win32'",
+    "python_full_version == '3.14.*' and sys_platform == 'emscripten'",
     "python_full_version == '3.14.*' and sys_platform != 'emscripten' and sys_platform != 'win32'",
     "python_full_version == '3.13.*' and sys_platform == 'win32'",
-    "python_full_version < '3.13' and sys_platform == 'win32'",
     "python_full_version == '3.13.*' and sys_platform == 'emscripten'",
-    "python_full_version < '3.13' and sys_platform == 'emscripten'",
     "python_full_version == '3.13.*' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version < '3.13' and sys_platform == 'win32'",
+    "python_full_version < '3.13' and sys_platform == 'emscripten'",
     "python_full_version < '3.13' and sys_platform != 'emscripten' and sys_platform != 'win32'",
 ]
 
@@ -214,6 +214,11 @@ dev = [
     { name = "ruff" },
 ]
 
+[package.dev-dependencies]
+app = [
+    { name = "streamlit" },
+]
+
 [package.metadata]
 requires-dist = [
     { name = "bandit", marker = "extra == 'dev'", specifier = ">=1.7" },
@@ -232,6 +237,9 @@ requires-dist = [
     { name = "typer", specifier = ">=0.12" },
 ]
 provides-extras = ["app", "dev"]
+
+[package.metadata.requires-dev]
+app = [{ name = "streamlit", specifier = ">=1.38" }]
 
 [[package]]
 name = "charset-normalizer"
